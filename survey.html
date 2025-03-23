@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take a Survey - ViraHealth</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Take a Survey</h1>
+    </header>
+    <section class="survey-form">
+        <form action="/submit-survey" method="POST">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="health-condition">Do you have any existing health conditions?</label>
+            <textarea id="health-condition" name="health-condition" required></textarea>
+            
+            <label for="lifestyle">Describe your lifestyle (e.g., sedentary, active):</label>
+            <textarea id="lifestyle" name="lifestyle" required></textarea>
+            
+            <label for="goals">What are your healthcare goals?</label>
+            <textarea id="goals" name="goals" required></textarea>
+            
+            <button type="submit" class="btn">Submit Survey</button>
+        </form>
+    </section>
+</body>
+</html>

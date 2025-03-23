@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer's Care Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset and basic styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header */
+        .header {
+            background-color: #0044cc;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Sections */
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .section-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0;
+        }
+
+        .card p {
+            padding: 0 10px 20px;
+            font-size: 1rem;
+        }
+
+        .card a {
+            display: inline-block;
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #0033aa;
+        }
+
+        .button-wrapper {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-wrapper a {
+            background-color: #ff5555;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .button-wrapper a:hover {
+            background-color: #cc4444;
+        }
+
+        /* Training Resources Styling */
+        #training-resources {
+            background-color: #fff;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+
+        #training-resources h2 {
+            color: #0044cc;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #training-resources p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .resources-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .resources-list li {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .resources-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .resources-list a {
+            display: block;
+            color: #0044cc;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .resources-list a:hover {
+            color: #0033aa;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 768px) {
+            .resources-list ul {
+                grid-template-columns: 1fr; /* Stack the items in a single column */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Welcome to Alzheimer's Care Centre</h1>
+        <p>Your trusted companion for Alzheimer's care and support</p>
+    </header>
+
+    <!-- Info Section -->
+    <section>
+        <div class="container">
+            <h2>Information & Resources</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="q1.png" alt="Alzheimer's Information">
+                    <h3>Learn About Alzheimer's</h3>
+                    <p>Explore in-depth guides, articles, and tips to understand Alzheimer's and how to care for those affected by it.</p>
+                    <a href="#" onclick="showAlzheimerInfo()">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Caregiver Section -->
+    <section>
+        <div class="container">
+            <h2>Caregiver Support</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="q3.jpg" alt="Caregiver">
+                    <h3>Caregiver Community</h3>
+                    <p>Connect with others and share your experiences in a supportive community of caregivers.</p>
+                    <a href="#" onclick="joinCaregiverCommunity()">Join Now</a>
+                </div>
+                <div class="card">
+                    <img src="q5.jpg" alt="Training Resources">
+                    <h3>Training Resources</h3>
+                    <p>Access professional training materials to enhance caregiving skills and confidence.</p>
+                    <a href="#" onclick="accessTraining()">Access Training</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panic Button Section -->
+    <section>
+        <div class="container">
+            <h2>Emergency Support</h2>
+            <div class="button-wrapper">
+                <a href="#" onclick="activatePanicButton()">Panic Button</a>
+            </div>
+            <p style="text-align: center; margin-top: 10px;">Quickly notify emergency contacts or services for immediate help.</p>
+        </div>
+    </section>
+
+   
+    <!-- Alzheimer's Chatbot Section -->
+    <section>
+        <div class="container">
+            <h2>Alzheimer's Chatbot</h2>
+            <div class="section-content">
+                <div class="card">
+                    <img src="L2.jpg" alt="Chatbot">
+                    <h3>AI Care Companion</h3>
+                    <p>Interact with our smart AI chatbot to get instant answers, advice, and reminders.</p>
+                    <a href="#" onclick="startChatting()">Chat Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Resources Page -->
+    <section id="training-resources">
+        <div class="container">
+            <h2>Training Resources</h2>
+            <p>Below are some important resources to help you learn more about Alzheimer's care and enhance your caregiving skills:</p>
+            <div class="resources-list">
+                <ul>
+                    <li><a href="https://www.alz.org/professionals/professional-providers/education-training" target="_blank">Alzheimer's Association - Professional Providers Training</a></li>
+                    <li><a href="https://www.caregiver.org/caregiver/healthy-caring/training" target="_blank">Caregiver.org - Training for Caregivers</a></li>
+                    <li><a href="https://www.cdc.gov/aging/healthybrain/index.htm" target="_blank">CDC - Healthy Brain Aging</a></li>
+                    <li><a href="https://www.dementiacarecentral.com" target="_blank">Dementia Care Central - Expert Advice & Tips</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to show Alzheimer's info
+        function

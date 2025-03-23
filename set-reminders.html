@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Reminders - Alzheimer's Care Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles specific to the Set Reminders page */
+        .reminder-form {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group button {
+            background-color: #0044cc;
+            color: white;
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+
+        .form-group button:hover {
+            background-color: #0033aa;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Set Reminders</h1>
+        <p>Keep track of medications, appointments, and activities with our easy-to-use reminder system.</p>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Set Your Reminders</h2>
+            <div class="reminder-form">
+                <form id="reminderForm">
+                    <div class="form-group">
+                        <label for="reminderType">Reminder Type</label>
+                        <select id="reminderType" name="reminderType" required>
+                            <option value="" disabled selected>Select reminder type</option>
+                            <option value="medication">Medication</option>
+                            <option value="appointment">Appointment</option>
+                            <option value="activity">Activity</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderTitle">Reminder Title</label>
+                        <input type="text" id="reminderTitle" name="reminderTitle" placeholder="Enter reminder title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderDate">Reminder Date</label>
+                        <input type="date" id="reminderDate" name="reminderDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="reminderTime">Reminder Time</label>
+                        <input type="time" id="reminderTime" name="reminderTime" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Set Reminder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JS for handling reminder form submission
+        document.getElementById('reminderForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const reminderType = document.getElementById('reminderType').value;
+            const reminderTitle = document.getElementById('reminderTitle').value;
+            const reminderDate = document.getElementById('reminderDate').value;
+            const reminderTime = document.getElementById('reminderTime').value;
+
+            if (reminderType && reminderTitle && reminderDate && reminderTime) {
+                alert(`Reminder Set!\nType: ${reminderType}\nTitle: ${reminderTitle}\nDate: ${reminderDate}\nTime: ${reminderTime}`);
+            } else {
+                alert('Please fill in all fields');
+            }
+        });
+    </script>
+</body>
+</html>

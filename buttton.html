@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panic Button - Alzheimer's Care Centre</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #0044cc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .button-wrapper {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .button-wrapper a {
+            background-color: #ff5555;
+            padding: 20px 40px;
+            border-radius: 5px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: inline-block;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .button-wrapper a:hover {
+            background-color: #cc4444;
+        }
+
+        /* Emergency Contacts */
+        .contact-list {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .contact-list h2 {
+            font-size: 2rem;
+            color: #0044cc;
+        }
+
+        .contact-list p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .contact-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-list ul li {
+            margin: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Panic Button</h1>
+        <p>Click the Panic Button for emergency support and important contacts.</p>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="button-wrapper">
+                <a href="#" onclick="showContacts()">Activate Panic Button</a>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="contact-list" id="contactList">
+                <h2>Emergency Contacts</h2>
+                <p>The following contacts have been notified:</p>
+                <ul>
+                    <li><strong>John Doe</strong> - Family Member (Phone: +1234567890)</li>
+                    <li><strong>Jane Smith</strong> - Caregiver (Phone: +0987654321)</li>
+                    <li><strong>Emergency Services</strong> (Phone: 911)</li>
+                </ul>
+                <p>If necessary, local authorities will be contacted for immediate assistance.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to show emergency contacts when the Panic Button is pressed
+        function showContacts() {
+            alert("Panic Button Activated! Emergency contacts are being notified.");
+            document.getElementById("contactList").style.display = 'block';
+        }
+    </script>
+</body>
+</html>
